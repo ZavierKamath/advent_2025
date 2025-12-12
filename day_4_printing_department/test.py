@@ -1,5 +1,5 @@
-from rolls import *
+from clear import *
 
 map_path = 'test_map_2.txt'
-count = get_available_rolls(map_path)
+count = clear_rolls(map_path)
 print(count)
