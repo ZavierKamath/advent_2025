@@ -3,6 +3,7 @@ from typing import List
 
 logging.basicConfig(level=logging.INFO)
 
+
 def get_map(map_path: str):
     # Initialize an array to store row arrays in
     map = []
@@ -15,6 +16,7 @@ def get_map(map_path: str):
 
     # Return the map
     return map
+
 
 def get_validity(x: int, y: int, map: List[List[str]], rows: int, cols: int):
     # Define adjacent direction list
@@ -42,7 +44,7 @@ def get_validity(x: int, y: int, map: List[List[str]], rows: int, cols: int):
         # If adjacent space is paper roll
         if (-1 < new_x < cols) and (-1 < new_y < rows):
             if (map[new_y][new_x] == '@'):
-                
+
                 # Find paper rolls adjacent to space
                 count += 1
 
@@ -51,6 +53,7 @@ def get_validity(x: int, y: int, map: List[List[str]], rows: int, cols: int):
 
     # Return validity
     return is_valid
+
 
 def compute_adj(map: List[List[str]], rows: int, cols: int):
     count = 0
@@ -71,9 +74,11 @@ def compute_adj(map: List[List[str]], rows: int, cols: int):
 
     return adj, count
 
+
 def print_map(map: List[List[str]]):
     for row in map:
         print(''.join(row))
+
 
 def get_available_rolls(map_path: str):
     logging.info('Started application')
@@ -96,6 +101,7 @@ def get_available_rolls(map_path: str):
     return count
 
     logging.info('Finished application')
+
 
 if __name__ == '__main__':
     get_available_rolls('map.txt')
