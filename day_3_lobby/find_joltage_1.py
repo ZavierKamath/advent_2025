@@ -76,7 +76,6 @@ def iter_banks(banks: List[str]):
     # Return total
     return total
 
-
 # Find total
 total = iter_banks(banks)
 
